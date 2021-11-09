@@ -1,0 +1,89 @@
+@extends('layouts.main')
+@section('css')  
+    <link href="{{URL::asset('resources/templates/assets/plugins/datatable/css/dataTables.bootstrap5.min.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{URL::asset('resources/templates/profile/assets/css/font-awesome.min.css')}}">  
+    <link rel="stylesheet" href="{{URL::asset('resources/templates/profile/cropper/cropper.css')}}"> 
+    <link rel="stylesheet" href="{{URL::asset('resources/customs/css/global.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('resources/customs/css/ticket-details.css')}}">
+@endsection
+@section('content')
+<div class="page-wrapper">
+    <div class="page-content">
+        <!--breadcrumb-->
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+            <div class="breadcrumb-title "><i class="bx bx-book-bookmark"></i> Ticket</div>
+            <div class="ps-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"></a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><i class="bx bx-clipboard"></i> My Ticket</li>
+                    </ol>
+                </nav>
+            </div> 
+        </div> 
+        <!--end breadcrumb-->
+        <div class="container card">
+            <div class="main-body">
+                <br />
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h5 class="card-title">Ticket Details</h5>
+                        @include('pages.ticket.form.ticket-details-form') 
+                     </div>  
+                 </div> 
+            </div>
+        </div>
+    </div>
+</div> 
+<div class="card chat-box">
+        <div class="card-header bg-primary">
+            <div class="clearfix">
+                <strong>Chat Support</strong><br />
+                <i class='bx bxs-circle me-1 chart-online'></i>Active Now
+                <a href="#" class="hide-show-message float-end">
+                    <i class="bx bx-minus bx-sm"></i>
+                </a>
+            </div>
+        </div>
+        <div class="chat-message">
+        <div class="card-body"> 
+            <div class="">
+                <div class="chat-content-leftside">
+                    <div class="d-flex">  
+                        <div class="flex-grow-1 ms-2">
+                            <p class="mb-0 chat-time"><i class='bx bx-user'></i> Harvey, 2:35 PM</p>
+                            <p class="chat-left-msg">Hi, harvey where are you now a days?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-content-rightside">
+                    <div class="d-flex ms-auto">
+                        <div class="flex-grow-1 me-2">
+                            <p class="mb-0 chat-time text-end"><i class='bx bx-user'></i> you, 2:37 PM</p>
+                            <p class="chat-right-msg">I am in USA</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div> 
+        <div class="card-footer chat-form">
+            <div class="input-groups">	 
+                <textarea type="text" class="form-control" placeholder="Type a message" rows="1"></textarea>
+            </div> 
+        </div>
+    </div>
+</div>
+    @section('chat-js')  
+        <script> 
+            new PerfectScrollbar('.chat-message');
+        </script>
+    @endsection 
+    @include('pages.ticket.modal.ticket-modal') 
+    @section('js')  
+        <script src="{{URL::asset('resources/templates/assets/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
+	    <script src="{{URL::asset('resources/templates/assets/plugins/datatable/js/dataTables.bootstrap5.min.js')}}"></script> 
+        <script src="{{URL::asset('resources/customs/js/global.js')}}"></script>
+        <script src="{{URL::asset('resources/customs/js/ticket-details.js')}}"></script>
+        <script src="{{URL::asset('resources/templates/assets/js/app.js')}}"></script>
+    @endsection
+    @stop 

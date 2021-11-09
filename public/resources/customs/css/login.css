@@ -1,0 +1,73 @@
+
+
+  .avatarimage {
+    opacity: 1;
+    display: block;
+    width: 162px;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+ 
+ 
+  .avatarimage img
+  {
+      height: 120px !important;
+      width: 100% !important;
+  }
+
+  .buttons
+  {
+    width: 160px;
+  }
+
+  .buttons a
+  {
+    display: inline;
+    width: 40px;
+  }
+
+.modal-header button
+  {
+      height: 30px !important;
+  }
+  .modal-header .modal-title
+{
+   font-weight: bold;
+}
+
+.modal-header .btn i
+{
+    margin-top: -15px !important;
+}
+
+.modal-header .btn  
+{
+    margin-right: 5px !important;
+}
+#my_camera {
+    width: 100% !important;
+    height: 100%  !important;
+}
+
+.checkbox-agree 
+{
+    margin-left: 20px !important;
+}
+.form-check-label
+{
+  color: #212252 !important;
+}
+.is-invalid .avatarimage
+{
+  border-color: #DC3545 !important;
+}
+/* .imagearea .buttons
+{
+    display: none;
+}
+
+form .imagearea:hover  .buttons
+{
+    display: block;
+} */
