@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dashboard;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Session;
 
 class DashboardController extends Controller
@@ -12,7 +13,8 @@ class DashboardController extends Controller
     {
         $data['title'] = "MyHelp | Dashboard";
 
-
+        $date = Carbon::now()->toDateString();
+        $data['datenow'] = $date;
 
         return view('pages.dashboard.index', $data);
     }

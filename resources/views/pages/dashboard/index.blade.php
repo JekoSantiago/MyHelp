@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="{{URL::asset('resources/templates/profile/cropper/cropper.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/customs/css/global.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/templates/assets/plugins/c3/c3.min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('resources/templates/assets/plugins/datetimepicker/css/classic.css')}}">
+
 @endsection
 @section('content')
     <div class="page-wrapper">
@@ -17,6 +19,18 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="filter_apply_fdate">Date From</label>
+                        <input id="filter_apply_fdate" name="filter_apply_fdate" type="date" class="form-control filter-flatpickr" value="{{ $datenow }}">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="filter_apply_tdate">Date To</label>
+                        <input id="filter_apply_tdate" name="filter_apply_tdate" type="date" class="form-control filter-flatpickr" value="{{ $datenow }}">
+                    </div>
+                </div>
 			</div><!--end row-->
             <hr />
             <!--end breadcrumb-->
@@ -49,6 +63,7 @@
         <script src="{{URL::asset('resources/customs/js/dashboard.js')}}"></script>
         <script src="{{URL::asset('resources/templates/assets/plugins/c3/c3.min.js')}}"></script>
         <script src="{{URL::asset('resources/templates/assets/plugins/d3/d3.min.js')}}"></script>
+        <script src="{{URL::asset('resources/templates/assets/plugins/datetimepicker/js/picker.js')}}"></script>
 
     @endsection
     @stop
